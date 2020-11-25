@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Home;
+use App\Http\Controllers\Productos;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+
+
+
+
+
+
+
+//////con vistas
+Route::get('/', [Home::class, 'index'] );
+
+Route::get('gatos/Catalogo', [Productos::class,'gato']);
+    
+
+Route::get('Perros/catalogo', [Productos::class,'perro']);
+
+Route::get('contacto', [Home::class, 'contacto']); 
+
+
